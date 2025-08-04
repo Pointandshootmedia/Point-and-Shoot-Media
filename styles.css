@@ -1793,13 +1793,21 @@ footer {
     gap: 2rem;
 }
 
-.creative-team,
-.marketing-team,
-.partners-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.creative-team {
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 5rem;
     gap: 2rem;
-    justify-items: center;
+}
+
+.marketing-team {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+
+.partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
 }
 
 .marketing-title {
@@ -1839,10 +1847,8 @@ footer {
     border: 1px solid rgba(255, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 350px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 .team-member:hover {
@@ -1852,9 +1858,8 @@ footer {
 
 .member-image {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 4/3;
     overflow: hidden;
-    position: relative;
 }
 
 .member-image img {
@@ -1903,8 +1908,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: auto;
-    height: 100%;
+    min-height: 16em;
 }
 
 .member-info h3 {
@@ -1926,58 +1930,49 @@ footer {
 .member-bio {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 1rem;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    max-height: 12em;
     padding: 0;
     text-align: left;
-    flex-grow: 1;
 }
 
 @media (max-width: 1400px) {
-    .team-container {
-        padding: 0 1rem;
+    .creative-team,
+    .marketing-team,
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    .creative-team,
+    .marketing-team,
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
+    .main-team,
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .team-section {
         padding: 3rem 1rem;
     }
     
-    .section-title {
-        font-size: 2.5rem;
+    .main-team {
+        margin-bottom: 3rem;
     }
     
-    .marketing-title,
     .partners-title {
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
     }
-    
-    .member-bio {
-        -webkit-line-clamp: 4;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-section {
-        padding: 2rem 0.5rem;
-    }
-    
-    .team-container {
-        padding: 0 0.5rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .member-info {
-        padding: 1.25rem 1rem;
-    }
-} 
 } 
