@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Services - Point & Shoot Media LLC</title>
+    <meta name="description" content="Strategic digital marketing solutions including SEO optimization, crowdfunding campaigns, and comprehensive brand development.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;"><img src="assets/Branding/ICON ONLY.png" alt="Point & Shoot Media Logo" class="nav-logo" style="height: 50px; margin-right: 15px; filter: brightness(0) invert(1);"></a>
+            <div class="logo-text">
+                <span>POINT & SHOOT MEDIA</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About Us</a>
+                <a href="https://www.clementho.com" target="_blank">Buy Photos</a>
+                <a href="index.html#about" class="contact-btn">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Detail Section -->
+    <section class="service-detail-section">
+        <div class="service-detail-container">
+            <h1>Marketing Services</h1>
+            
+            <div class="service-overview">
+                <div class="service-main-content">
+                    <h2>Strategic Digital Marketing</h2>
+                    <p>At Point & Shoot Media, we deliver comprehensive digital marketing solutions that maximize your brand's visibility and market presence. Our data-driven approach ensures measurable results and sustainable growth for your business.</p>
+                    
+                    <div class="service-features">
+                        <h3>Our Marketing Solutions Include:</h3>
+                        <ul>
+                            <li>SEO Optimization & Strategy</li>
+                            <li>Crowdfunding Campaign Management</li>
+                            <li>Brand Development & Strategy</li>
+                            <li>Social Media Marketing</li>
+                            <li>Content Marketing</li>
+                            <li>Digital Analytics & Reporting</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-section">
+                        <h3>Our Process</h3>
+                        <div class="process-steps">
+                            <div class="step">
+                                <i class="fas fa-search"></i>
+                                <h4>Analysis</h4>
+                                <p>Market research and competitive analysis</p>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Strategy</h4>
+                                <p>Custom marketing plan development</p>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-rocket"></i>
+                                <h4>Implementation</h4>
+                                <p>Execute marketing campaigns and initiatives</p>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-chart-bar"></i>
+                                <h4>Optimization</h4>
+                                <p>Performance tracking and continuous improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar">
+                    <div class="equipment-section">
+                        <h3>Our Tools & Platforms</h3>
+                        <ul>
+                            <li>Advanced SEO Software</li>
+                            <li>Social Media Management Tools</li>
+                            <li>Analytics Platforms</li>
+                            <li>Content Management Systems</li>
+                            <li>Email Marketing Platforms</li>
+                            <li>Campaign Tracking Tools</li>
+                            <li>Brand Management Software</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Ready to Grow?</h3>
+                        <p>Let's elevate your brand's digital presence with strategic marketing solutions.</p>
+                        <a href="index.html#about" class="cta-button">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Studies Section -->
+            <div class="case-studies" style="margin: 60px 0;">
+                <h2 style="text-align: center; margin-bottom: 60px; font-size: 2.5em; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">SUCCESS STORIES</h2>
+                <div class="case-studies-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto;">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-item" style="background: rgba(0, 0, 0, 0.3); padding: 30px; border-radius: 10px;">
+                        <h3 style="color: #ff0000; margin-bottom: 15px;">Crowdfunding Success</h3>
+                        <p>Successfully raised over $5M through strategic crowdfunding campaigns.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                            <li>✓ Campaign Strategy</li>
+                            <li>✓ Content Creation</li>
+                            <li>✓ Community Management</li>
+                        </ul>
+                    </div>
+                    <!-- Case Study 2 -->
+                    <div class="case-study-item" style="background: rgba(0, 0, 0, 0.3); padding: 30px; border-radius: 10px;">
+                        <h3 style="color: #ff0000; margin-bottom: 15px;">SEO Growth</h3>
+                        <p>300% increase in organic traffic through targeted SEO optimization.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                            <li>✓ Keyword Strategy</li>
+                            <li>✓ Content Optimization</li>
+                            <li>✓ Technical SEO</li>
+                        </ul>
+                    </div>
+                    <!-- Case Study 3 -->
+                    <div class="case-study-item" style="background: rgba(0, 0, 0, 0.3); padding: 30px; border-radius: 10px;">
+                        <h3 style="color: #ff0000; margin-bottom: 15px;">Brand Development</h3>
+                        <p>Comprehensive brand strategy and digital presence enhancement.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                            <li>✓ Brand Strategy</li>
+                            <li>✓ Visual Identity</li>
+                            <li>✓ Market Positioning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Services Section -->
+            <div class="other-services">
+                <h3>Explore Our Other Services</h3>
+                <div class="other-services-grid">
+                    <a href="video-production.html" class="other-service-item">
+                        <i class="fas fa-video"></i>
+                        <span>Video Production</span>
+                    </a>
+                    <a href="photography.html" class="other-service-item">
+                        <i class="fas fa-camera-retro"></i>
+                        <span>Photography</span>
+                    </a>
+                    <a href="drone-services.html" class="other-service-item">
+                        <i class="fas fa-helicopter"></i>
+                        <span>Drone Services</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Point & Shoot Media LLC. All Rights Reserved.</p>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
