@@ -160,20 +160,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const track = document.querySelector('.bts-track');
     const prevButton = document.querySelector('.bts-nav.prev');
     const nextButton = document.querySelector('.bts-nav.next');
-    const itemWidth = 400; // Width of each item including gap
     
-    if (!track || !prevButton || !nextButton) return;
+    if (track && prevButton && nextButton) {
+        function updateBTSCarousel() {
+            const items = track.querySelectorAll('.bts-item');
+            const itemWidth = items[0].offsetWidth;
+            const visibleWidth = track.offsetWidth;
+            const totalWidth = itemWidth * items.length;
+            let currentPosition = track.scrollLeft;
 
-    function scroll(direction) {
-        const scrollAmount = direction === 'left' ? -itemWidth : itemWidth;
-        track.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    }
+            // Enable/disable buttons based on scroll position
+            prevButton.style.opacity = currentPosition <= 0 ? '0.5' : '1';
+            nextButton.style.opacity = currentPosition >= totalWidth - visibleWidth ? '0.5' : '1';
+        }
 
-    prevButton.addEventListener('click', () => scroll('left'));
-    nextButton.addEventListener('click', () => scroll('right'));
+        function scrollBTS(direction) {
+            const items = track.querySelectorAll('.bts-item');
+            const itemWidth = items[0].offsetWidth;
+            const scrollAmount = direction === 'left' ? -itemWidth : itemWidth;
+            
+            track.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+
+            setTimeout(updateBTSCarousel, 300);
+        }
+
+        // Initial setup
+        updateBTSCarousel();
+
+        // Event listeners
+        prevButton.addEventListener('click', () => scrollBTS('left'));
+        nextButton.addEventListener('click', () => scrollBTS('right'));
+        track.addEventListener('scroll', updateBTSCarousel);
 
     // Handle touch events for mobile swipe
     let touchStartX = 0;
