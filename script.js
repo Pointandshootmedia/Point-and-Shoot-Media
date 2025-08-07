@@ -15,11 +15,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Functionality
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    }
+
     // Video background handling
     const video = document.getElementById('background-video');
-    video.play().catch(function(error) {
-        console.log("Video autoplay failed:", error);
-    });
+    if (video) {
+        video.play().catch(function(error) {
+            console.log("Video autoplay failed:", error);
+        });
+    }
 
     // Portfolio Navigation
     const portfolioGrid = document.querySelector('.portfolio-grid');
@@ -206,11 +235,12 @@ document.addEventListener('DOMContentLoaded', function() {
     track.addEventListener('touchend', e => {
         touchEndX = e.changedTouches[0].screenX;
         if (touchStartX - touchEndX > 50) {
-            scroll('right');
+            scrollBTS('right');
         } else if (touchEndX - touchStartX > 50) {
-            scroll('left');
+            scrollBTS('left');
         }
     }, false);
+    }
 
     // Photo Carousel
     const photoTrack = document.querySelector('.photo-track');
@@ -244,4 +274,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, false);
     }
-}); 
+});
