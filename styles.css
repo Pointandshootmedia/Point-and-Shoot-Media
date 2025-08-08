@@ -137,13 +137,21 @@ h2 {
 .home-section {
     padding: 0;
     position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    overflow: hidden;
 }
 
+/* Fix hero video white line on mobile */
 .video-container {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw;
 }
 
 .youtube-background {
@@ -598,11 +606,16 @@ h2 {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
 
 .contact-item i {
     color: var(--primary-color);
     margin-right: 10px;
+}
+
+.contact-item span {
+    color: var(--text-color);
 }
 
 .social-buttons {
@@ -636,7 +649,7 @@ h2 {
 }
 
 .social-btn.instagram {
-    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    background: var(--primary-color);
 }
 
 .social-btn.youtube {
@@ -834,6 +847,79 @@ footer {
         width: 280px;
         height: 320px;
     }
+
+    /* Fix hero video white line on mobile */
+    .video-container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .home-section {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .youtube-background iframe {
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    
+    /* Fix client logos white gradient background */
+    .client-section-wrapper {
+        background: rgba(0,0,0,0.95);
+    }
+    
+    /* Fix service detail section headers being cut off */
+    .service-detail-section {
+        padding-top: 100px;
+    }
+    
+    .photo-grid-section {
+        padding-top: 100px;
+    }
+    
+    .drone-services-section {
+        padding-top: 100px;
+    }
+    
+    .service-detail-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .photo-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .service-detail-container {
+        padding: 1rem;
+    }
+    
+    .service-main-content {
+        padding: 1.5rem;
+    }
+    
+    .service-main-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Fix team section title cutoff */
+    .team-section {
+        padding-top: 100px;
+    }
+
+    /* Hide "Our Work" section on mobile in video production page */
+    .video-examples {
+        display: none;
+    }
 }
 
 /* Animations */
@@ -927,13 +1013,14 @@ footer {
     color: var(--text-color);
 }
 
+/* Fix client logos white gradient background */
 .client-section-wrapper {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+    background: rgba(0,0,0,0.95);
     border-top: 1px solid rgba(255, 0, 0, 0.2);
     z-index: 3;
 }
@@ -1143,8 +1230,9 @@ footer {
 }
 
 /* Service Detail Page Styles */
+/* Fix service detail section headers being cut off */
 .service-detail-section {
-    padding-top: 100px;
+    padding-top: 120px;
     min-height: 100vh;
     background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
     color: var(--text-color);
@@ -1399,17 +1487,87 @@ footer {
 }
 
 /* Photo Grid Styles */
+/* Fix YouTube videos being red */
+.portfolio-item iframe,
+.video-item iframe,
+.video-examples iframe {
+    filter: none !important;
+    background: transparent !important;
+}
+
+/* Ensure video thumbnails display properly */
+.video-item {
+    position: relative;
+}
+
+.video-item iframe {
+    filter: none !important;
+    background: transparent !important;
+    z-index: 1;
+}
+
+/* Remove any potential overlays from video examples */
+.video-examples {
+    position: relative;
+}
+
+.video-examples iframe {
+    filter: none !important;
+    background: transparent !important;
+}
+
+/* Ensure no red overlays on video thumbnails */
+.video-grid iframe {
+    filter: none !important;
+    background: transparent !important;
+}
+
+/* Override any potential red backgrounds on video elements */
+.video-item,
+.video-item div,
+.video-examples,
+.video-examples div {
+    background: transparent !important;
+}
+
+.video-item iframe,
+.video-examples iframe,
+.video-grid iframe {
+    filter: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove any potential overlays */
+.video-item::before,
+.video-item::after,
+.video-examples::before,
+.video-examples::after {
+    display: none !important;
+}
+
+/* Fix photo services alignment */
 .photo-grid-section {
-    padding: 4rem 2rem;
-    background-color: var(--background-dark);
+    padding-top: 120px;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+    color: var(--text-color);
+}
+
+/* Fix drone services header */
+.drone-services-section {
+    padding-top: 120px;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+    color: var(--text-color);
 }
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .photo-item {
@@ -2302,6 +2460,46 @@ footer {
     .category-section:nth-child(4) .thumbnail-item {
         width: 180px;
         height: 135px;
+    }
+
+    /* Additional mobile fixes for smaller screens */
+    .service-detail-section {
+        padding-top: 90px;
+    }
+    
+    .photo-grid-section {
+        padding-top: 90px;
+    }
+    
+    .drone-services-section {
+        padding-top: 90px;
+    }
+    
+    .service-detail-section h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-main-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .photo-grid {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .service-detail-container {
+        padding: 0.5rem;
+    }
+    
+    .service-main-content {
+        padding: 1rem;
+    }
+
+    /* Additional team section fixes for smaller screens */
+    .team-section {
+        padding-top: 90px;
     }
 }
 
