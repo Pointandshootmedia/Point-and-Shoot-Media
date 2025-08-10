@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Desktop Navigation -->
+    <nav class="navbar desktop-nav">
         <div class="nav-container">
             <a href="#home" class="logo"><img src="assets/Branding/ICON ONLY.png" alt="Point & Shoot Media Logo" class="nav-logo"></a>
             <div class="logo-text">
@@ -32,8 +32,32 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section home-section">
+    <!-- Mobile Navigation -->
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-nav-item active" data-target="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="mobile-nav-item" data-target="services">
+            <i class="fas fa-briefcase"></i>
+            <span>Services</span>
+        </div>
+        <div class="mobile-nav-item" data-target="portfolio">
+            <i class="fas fa-images"></i>
+            <span>Work</span>
+        </div>
+        <div class="mobile-nav-item" data-target="about">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+        </div>
+        <div class="mobile-nav-item" data-target="contact">
+            <i class="fas fa-phone"></i>
+            <span>Contact</span>
+        </div>
+    </nav>
+
+    <!-- Desktop Home Section -->
+    <section id="home" class="section home-section desktop-only">
         <div class="video-container">
             <div class="youtube-background">
                 <iframe 
@@ -47,7 +71,6 @@
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1>Point & Shoot Media LLC</h1>
-
                 <a href="#services" class="cta-button">Our Services</a>
             </div>
         </div>
@@ -90,8 +113,6 @@
             <div class="client-logo">
                 <img src="assets/clients/client-logo11.png" alt="Client Logo 11" loading="lazy">
             </div>
-
-
             
             <!-- Duplicate set for seamless loop -->
             <div class="client-logo">
@@ -127,7 +148,6 @@
             <div class="client-logo">
                 <img src="assets/clients/client-logo11.png" alt="Client Logo 11" loading="lazy">
             </div>
-
 
                 </div>
                 <!-- Duplicate for seamless loop -->
@@ -168,12 +188,192 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section services-section">
+    <!-- Mobile App Container -->
+    <div class="mobile-app-container mobile-only">
+        <!-- Mobile Home Screen -->
+        <div class="mobile-screen active" id="mobile-home">
+            <div class="mobile-hero-static">
+                <div class="mobile-video-container">
+                    <div class="mobile-youtube-background">
+                        <iframe 
+                            id="mobile-youtube-video"
+                            src="https://www.youtube.com/embed/4-A-rvIuUHc?autoplay=1&mute=1&loop=1&playlist=4-A-rvIuUHc&controls=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&iv_load_policy=3"
+                            frameborder="0"
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            style="border: none;">
+                        </iframe>
+                    </div>
+                    <div class="mobile-hero-overlay"></div>
+                    <div class="mobile-hero-content">
+                        <img src="assets/Branding/ICON ONLY.png" alt="Point & Shoot Media" class="mobile-logo">
+                        <h1>Point & Shoot Media</h1>
+                        <p>Cinematic Storytelling</p>
+                        <div class="mobile-hero-tagline">
+                            <span>Professional Video Production</span>
+                            <span>Award-Winning Team</span>
+                            <span>Commercial • Real Estate • Events</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-quick-actions">
+                <div class="quick-action" data-target="services">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Services</span>
+                </div>
+                <div class="quick-action" data-target="contact">
+                    <i class="fas fa-phone"></i>
+                    <span>Get Quote</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Services Screen -->
+        <div class="mobile-screen" id="mobile-services">
+            <div class="mobile-screen-header">
+                <h2>Our Services</h2>
+            </div>
+            <div class="mobile-services-grid">
+                <div class="mobile-service-card" data-service="video">
+                    <div class="mobile-service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Production</h3>
+                    <p>Professional video production and post-production services</p>
+                </div>
+                
+                <div class="mobile-service-card" data-service="photo">
+                    <div class="mobile-service-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Professional photo production for all occasions</p>
+                </div>
+                
+                <div class="mobile-service-card" data-service="drone">
+                    <div class="mobile-service-icon">
+                        <i class="fas fa-helicopter"></i>
+                    </div>
+                    <h3>Drone Services</h3>
+                    <p>Breathtaking aerial perspectives and dynamic shots</p>
+                </div>
+                
+                <div class="mobile-service-card" data-service="marketing">
+                    <div class="mobile-service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>Strategic digital marketing and brand development</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Portfolio Screen -->
+        <div class="mobile-screen" id="mobile-portfolio">
+            <div class="mobile-screen-header">
+                <h2>Our Work</h2>
+            </div>
+                                <div class="mobile-portfolio-tabs">
+                        <div class="mobile-tab active" data-category="video">Video</div>
+                        <div class="mobile-tab" data-category="photo">Photo</div>
+                    </div>
+            <div class="mobile-portfolio-grid">
+                <!-- Portfolio items will be dynamically loaded -->
+            </div>
+        </div>
+
+        <!-- Mobile About Screen -->
+        <div class="mobile-screen" id="mobile-about">
+            <div class="mobile-screen-header">
+                <h2>About Us</h2>
+            </div>
+            <div class="mobile-about-content">
+                <div class="mobile-about-hero">
+                    <img src="assets/About-image.jpg" alt="About Point & Shoot Media" class="mobile-about-image">
+                    <div class="mobile-about-text">
+                        <h3>Founded by Clement Ho</h3>
+                        <p>We combine precision, creativity, and technical expertise to deliver cinematic stories that captivate and inspire.</p>
+                    </div>
+                </div>
+                
+                <div class="mobile-awards-section">
+                    <h3>Awards & Recognition</h3>
+                    <div class="mobile-awards-carousel">
+                        <div class="mobile-award-item">
+                            <img src="assets/Awards/REDACTED.jpg" alt="Best Short Film" loading="lazy">
+                            <div class="mobile-award-info">
+                                <h4>Best Short Film</h4>
+                                <p>2024 Ohio Student Valley Film Festival</p>
+                            </div>
+                        </div>
+                        <div class="mobile-award-item">
+                            <img src="assets/Awards/REDACTED 1.jpg" alt="Best Cinematography" loading="lazy">
+                            <div class="mobile-award-info">
+                                <h4>Best Cinematography</h4>
+                                <p>2024 Ohio Student Valley Film Festival</p>
+                            </div>
+                        </div>
+                        <div class="mobile-award-item">
+                            <img src="assets/Awards/ONE RIDE.jpg" alt="Nominee - Best Cinematography" loading="lazy">
+                            <div class="mobile-award-info">
+                                <h4>Nominee - Best Cinematography</h4>
+                                <p>2023 Ohio Student Valley Film Festival</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-team-preview">
+                    <h3>Meet the Team</h3>
+                    <a href="team.html" class="mobile-team-button">
+                        <span>View Full Team</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Contact Screen -->
+        <div class="mobile-screen" id="mobile-contact">
+            <div class="mobile-screen-header">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="mobile-contact-content">
+                <div class="mobile-contact-methods">
+                    <a href="tel:614-886-1117" class="mobile-contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>614-886-1117</p>
+                        </div>
+                    </a>
+                    <a href="mailto:clement@pointandshoot.media" class="mobile-contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>clement@pointandshoot.media</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/mr.h0/" target="_blank" class="mobile-contact-method">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4>Follow Us</h4>
+                            <p>@mr.h0</p>
+                        </div>
+                    </a>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Services Section -->
+    <section id="services" class="section services-section desktop-only">
         <div class="services-container">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
@@ -225,8 +425,8 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
+    <!-- Desktop About Section -->
+    <section id="about" class="section about-section desktop-only">
         <div class="about-container">
             <div class="about-content">
                 <h2>About Us</h2>
@@ -257,8 +457,6 @@
                 <img src="assets/About-image.jpg" alt="Professional Setup">
             </div>
         </div>
-
-
 
         <!-- Awards Section -->
         <div class="awards-section">
@@ -299,8 +497,6 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <!-- Footer -->
